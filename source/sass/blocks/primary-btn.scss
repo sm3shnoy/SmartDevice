@@ -1,0 +1,17 @@
+.primary-btn {
+  display: inline-block;
+  padding: 13px 26px 13px 26px;
+
+  vertical-align: top;
+  font-family: $main-fonts;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $main-text-color;
+
+  border: 1px solid $secondary-bg-color;
+  border-radius: 5px;
+}

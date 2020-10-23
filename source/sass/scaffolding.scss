@@ -46,20 +46,22 @@ html {
 }
 
 .container {
-  max-width: 1270px;
+  max-width: 1170px;
   margin: 0 auto;
 }
 
 // Для планшетов
 @media (max-width: 1023px) {
   .container {
-    max-width: 820px;
+    max-width: 870px;
+    padding: 0 25px;
   }
 }
 
 // для мобильных
 @media (max-width: 767px) {
   .container {
-    max-width: 310px;
+    max-width: 420px;
+    padding: 0 15px;
   }
 }

@@ -1,0 +1,25 @@
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo__text {
+  @include reset-list;
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+}
+
+.logo__name {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 29px;
+}
+
+.logo__slogan {
+  font-family: $extra-fonts;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: $fourth-text-color;
+}

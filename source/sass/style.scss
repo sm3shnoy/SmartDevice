@@ -3,3 +3,9 @@
 @import "variables.scss";
 @import "mixins.scss";
 @import "scaffolding.scss";
+@import "blocks/primary-btn";
+@import "blocks/secondary-btn";
+
+// стили для блоков
+@import "blocks/header";
+@import "blocks/logo";

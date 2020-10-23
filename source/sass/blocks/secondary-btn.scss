@@ -1,0 +1,17 @@
+.secondary-btn {
+  display: inline-block;
+  padding: 18px 45px 18px 46px;
+
+  vertical-align: top;
+  font-family: $main-fonts;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $main-text-color;
+
+  background-color: $extra-bg-color;
+  border-radius: 5px;
+}
