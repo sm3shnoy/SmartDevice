@@ -70,6 +70,15 @@
   &::after {
     bottom: 0;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .header__email {
@@ -80,6 +89,15 @@
   line-height: 18px;
 
   background: url("../img/icon-mail.svg") no-repeat left center;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .header__phone {
@@ -90,6 +108,15 @@
   line-height: 18px;
 
   background: url("../img/icon-phone.svg") no-repeat left center;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .header__call-btn {
@@ -167,6 +194,15 @@
 
   opacity: 0.5;
   transform: rotate(-90deg);
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.9;
+  }
 }
 
 @media (max-width: 1141px) {
