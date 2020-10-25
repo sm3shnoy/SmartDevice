@@ -1,18 +1,18 @@
 .header {
-  background-color: #1b2d37;
+  background-color: $main-bg-color;
   background-image:
-      url("../img/boards@1x.png"),
-      url("../img/triangles.svg"),
-      url("../img/header-bg@1x.png");
+    url("../img/boards@1x.png"),
+    url("../img/triangles.svg"),
+    url("../img/header-bg@1x.png");
   background-position:
-      right 9.2vw top 258px,
-      right 11.4vw top 118px,
-      top center;
+    right 9.2vw top 258px,
+    right 11.4vw top 118px,
+    top center;
   background-repeat: no-repeat;
   background-size:
-      37%,
-      35%,
-      cover;
+    37%,
+    35%,
+    cover;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image:
@@ -190,7 +190,7 @@
   font-family: $secondary-fonts;
   font-size: 14px;
   line-height: 16px;
-  color: #FFFFFF;
+  color: $main-text-color;
 
   opacity: 0.5;
   transform: rotate(-90deg);
@@ -214,31 +214,31 @@
 @media (max-width: 1330px) {
   .header {
     background-position:
-        right 1.2vw top 258px,
-        right 3.4vw top 118px,
-        top center;
+      right 1.2vw top 258px,
+      right 3.4vw top 118px,
+      top center;
   }
 }
 
 @media (max-width: 1155px) {
   .header {
     background-position:
-        right -4.8vw top 258px,
-        right -3.6vw top 118px,
-        top center;
+      right -4.8vw top 258px,
+      right -3.6vw top 118px,
+      top center;
   }
 }
 
 @media (max-width: 1023px) {
   .header {
     background-position:
-        right -26.8vw top 114px,
-        right -26.6vw top -39px,
-        top center;
+      right -26.8vw top 114px,
+      right -26.6vw top -39px,
+      top center;
     background-size:
-        60%,
-        69%,
-        cover;
+      60%,
+      69%,
+      cover;
   }
 
   .header__container {
@@ -319,13 +319,13 @@
 @media (max-width: 767px) {
   .header {
     background-position:
-        right -7px top 93px,
-        right -335px top -45px,
-        top center;
+      right -7px top 93px,
+      right -335px top -45px,
+      top center;
     background-size:
-        300px,
-        503px,
-        cover;
+      300px,
+      503px,
+      cover;
   }
 
   .header__container {
