@@ -1,5 +1,20 @@
+html {
+  height: 100%;
+
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
   min-width: 320px;
+  height: inherit;
   margin: 0;
   padding: 0;
 
@@ -35,14 +50,8 @@ img {
   overflow: hidden;
 }
 
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+.main {
+  flex: 1 0 auto;
 }
 
 .container {

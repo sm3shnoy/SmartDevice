@@ -1,0 +1,15 @@
+@media (max-width: 767px) {
+  .spoiler {
+    display: none;
+    flex-direction: column;
+    margin-top: 31px;
+
+    &--opened {
+      display: flex;
+    }
+
+    &--nojs {
+      display: flex;
+    }
+  }
+}

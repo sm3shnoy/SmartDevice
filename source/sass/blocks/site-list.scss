@@ -1,0 +1,19 @@
+.site-list__item-link {
+  font-family: $secondary-fonts;
+  font-size: 15px;
+  line-height: 25px;
+  color: $secondary-text-color;
+
+  opacity: 0.5;
+
+  &:hover,
+  &:focus {
+    color: $third-text-color;
+
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
