@@ -1,0 +1,225 @@
+.banner {
+  padding-top: 153px;
+
+  background-image:
+    url("../img/boards@1x.png"),
+    url("../img/triangles.svg");
+  background-position:
+    right 8.7vw top 153px,
+    right 11vw top 15px;
+  background-size: 37%, 35%;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image:
+      url("../img/boards@2x.png"),
+      url("../img/triangles.svg");
+  }
+}
+
+.banner__container {
+  position: relative;
+
+  max-width: 1461px;
+  padding: 58px 25px 276px;
+}
+
+.banner h1 {
+  @include reset;
+  max-width: 718px;
+  margin-bottom: 27px;
+
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 94px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: $main-text-color;
+}
+
+.banner p {
+  position: relative;
+
+  @include reset;
+  max-width: 718px;
+  margin-bottom: 42px;
+  padding-left: 94px;
+
+  font-family: $secondary-fonts;
+  font-size: 22px;
+  line-height: 34px;
+  color: $main-text-color;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 16px;
+    left: 0;
+
+    width: 66px;
+    height: 2px;
+
+    vertical-align: middle;
+
+    background-color: $secondary-bg-color;
+  }
+}
+
+.banner__btn {
+  margin-left: 92px;
+
+  &--mobile {
+    display: none;
+  }
+}
+
+.banner__scroll-down {
+  position: absolute;
+  bottom: 129px;
+  left: -15px;
+
+  max-width: 100px;
+
+  font-family: $secondary-fonts;
+  font-size: 14px;
+  line-height: 16px;
+  color: $main-text-color;
+
+  opacity: 0.5;
+  transform: rotate(-90deg);
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.9;
+  }
+}
+
+@media (max-width: 1341px) {
+  .banner {
+    background-position:
+      right 4.7vw top 153px,
+      right 6vw top 15px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .banner {
+    background-position:
+      right 0 top 153px,
+      right 1vw top 15px;
+  }
+}
+
+@media (max-width: 1127px) {
+  .banner {
+    background-position:
+      right -9vw top 153px,
+      right -5vw top 15px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .banner {
+    padding-top: 60px;
+
+    background-position:
+      right -26.4vw top 43px,
+      right -25.7vw top -108px;
+    background-size: 60%, 68.5%;
+  }
+
+  .banner__container {
+    padding-bottom: 162px;
+  }
+
+  .banner h1 {
+    max-width: 470px;
+    margin: 0 0 29px 63px;
+
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  .banner p {
+    max-width: 410px;
+    padding-left: 51px;
+    margin: 0 0 56px 63px;
+
+    font-size: 18px;
+    line-height: 28px;
+
+    &::before {
+      width: 33px;
+      margin-left: 3px;
+    }
+  }
+
+  .banner__btn {
+    margin-left: 114px;
+    padding: 18px 31px;
+  }
+
+  .banner__scroll-down {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner {
+    padding-top: 233px;
+
+    background-position:
+      right -7px top 38px,
+      right -337px top -100px;
+    background-size: 301px, 506px;
+  }
+
+  .banner__container {
+    max-width: 420px;
+    padding: 0 15px 70px;
+  }
+
+  .banner h1 {
+    margin: 0 0 28px 0;
+
+    font-size: 40px;
+    line-height: 47px;
+  }
+
+  .banner p {
+    margin: 0 0 40px 0;
+
+    font-size: 16px;
+    line-height: 25px;
+
+    &::before {
+      top: 14px;
+    }
+  }
+
+  .banner__btn {
+    width: 100%;
+    margin-left: 0;
+    padding: 0;
+
+    font-size: 0;
+
+    &::before {
+      content: "Бесплатная консультация";
+
+      display: inline-block;
+      width: 100%;
+      padding: 18px 31px;
+
+      vertical-align: top;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.05em;
+    }
+  }
+}
