@@ -1,6 +1,27 @@
+.features-wrapper {
+  position: relative;
+
+  background-image:
+    url("../img/small-triangle-left.svg"),
+    url("../img/small-triangle-right.svg"),
+    url("../img/big-triangle-right.svg"),
+    url("../img/big-triangle-left.svg");
+  background-repeat: no-repeat;
+  background-position:
+    left 10.2vw top 45px,
+    right 1vw top 461px,
+    left 28.7vw top 144px,
+    left -6px bottom -69px;
+  background-size:
+    11.8%,
+    11.8%,
+    46%,
+    30.3%;
+}
+
 .features__container {
   max-width: 1220px;
-  padding: 111px 25px 96px;
+  padding: 111px 25px 76px;
 }
 
 .features__list {
@@ -21,6 +42,7 @@
   margin-bottom: 30px;
   padding: 42px 42px 62px 46px;
 
+  background-color: $secondary-bg-color;
   border: 1px solid $sixth-bg-color;
 
   &::before {
@@ -76,9 +98,15 @@
 }
 
 @media (max-width: 1023px) {
+  .features-wrapper {
+    background-image: url("../img/big-triangle-right.svg");
+    background-position: left 27.3vw top 91px;
+    background-size: 875px 873px;
+  }
+
   .features__container {
     max-width: 770px;
-    padding-top: 54px;
+    padding: 54px 25px 26px;
   }
 
   .features__item {
@@ -115,10 +143,10 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .features__container {
     max-width: 320px;
-    padding: 36px 15px;
+    padding: 36px 15px 40px;
   }
 
   .features__list {

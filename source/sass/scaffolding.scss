@@ -55,15 +55,29 @@ img {
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 1220px;
   margin: 0 auto;
+  padding: 0 25px;
+}
+
+.block-title {
+  @include reset;
+
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: $extra-text-color;
 }
 
 // Для планшетов
 @media (max-width: 1023px) {
   .container {
     max-width: 870px;
-    padding: 0 25px;
+  }
+
+  .block-title {
+    font-size: 32px;
+    line-height: 45px;
   }
 }
 
@@ -72,5 +86,10 @@ img {
   .container {
     max-width: 420px;
     padding: 0 15px;
+  }
+
+  .block-title {
+    font-size: 28px;
+    line-height: 39px;
   }
 }

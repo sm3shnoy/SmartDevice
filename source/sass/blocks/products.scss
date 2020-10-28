@@ -1,0 +1,206 @@
+.products {
+  background-color: $main-bg-color;
+}
+
+.products__container {
+  padding: 87px 25px 107px;
+}
+
+.products__title {
+  margin-bottom: 53px;
+
+  color: $main-text-color;
+}
+
+.products__list {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.products__item {
+  width: calc(33.3% - 30px);
+  margin: 0 15px 20px;
+
+
+  &:hover .products__item-link::before,
+  &:focus .products__item-link::before {
+    opacity: 0.3;
+  }
+
+  &:active .products__item-link::before {
+    opacity: 0.1;
+  }
+}
+
+.products__item--production .products__item-link::before {
+  background-image: url("../img/products-1-desktop@1x.jpg");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/products-1-desktop@2x.jpg");
+  }
+}
+
+.products__item--installation .products__item-link::before {
+  background-image: url("../img/products-2-desktop@1x.jpg");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/products-2-desktop@2x.jpg");
+  }
+}
+
+.products__item--accessories .products__item-link::before {
+  background-image: url("../img/products-3-desktop@1x.jpg");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/products-3-desktop@2x.jpg");
+  }
+}
+
+.products__item-link {
+  position: relative;
+
+  display: flex;
+  width: 100%;
+  min-height: 620px;
+  padding: 50px 30px 63px 45px;
+
+  background-color: $main-bg-color;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: $fifth-bg-color;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.2;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: 63px;
+    height: 63px;
+
+    background-color: $extra-bg-color;
+    background-image: url("../img/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.products__item span {
+  position: relative;
+
+  max-width: 296px;
+
+  font-size: 20px;
+  line-height: 30px;
+  color: $main-text-color;
+  word-break: break-word;
+}
+
+@media (max-width: 1023px) {
+  .products__container {
+    padding: 52px 25px 31px;
+  }
+
+  .products__title {
+    margin-bottom: 49px;
+  }
+
+  .products__list {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .products__item {
+    width: 100%;
+    margin: 0 0 46px 0;
+  }
+
+  .products__item-link {
+    min-height: 256px;
+    padding-top: 40px;
+  }
+
+  .products__item--production .products__item-link::before {
+    background-image: url("../img/products-1-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/products-1-tablet@2x.jpg");
+    }
+  }
+
+  .products__item--installation .products__item-link::before {
+    background-image: url("../img/products-2-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/products-2-tablet@2x.jpg");
+    }
+  }
+
+  .products__item--accessories .products__item-link::before {
+    background-image: url("../img/products-3-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/products-3-tablet@2x.jpg");
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .products__container {
+    padding: 52px 15px 31px;
+  }
+
+  .products__title {
+    margin-bottom: 41px;
+    padding-left: 9px;
+  }
+
+  .products__item {
+    margin-bottom: 31px;
+  }
+
+  .products__item-link {
+    padding: 20px 30px 63px 35px;
+  }
+
+  .products__item--production .products__item-link::before {
+    background-image: url("../img/products-1-mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/products-1-mobile@2x.jpg");
+    }
+  }
+
+  .products__item--installation .products__item-link::before {
+    background-image: url("../img/products-2-mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/products-2-mobile@2x.jpg");
+    }
+  }
+
+  .products__item--accessories .products__item-link::before {
+    background-image: url("../img/products-3-mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/products-3-mobile@2x.jpg");
+    }
+  }
+}
