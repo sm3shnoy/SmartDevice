@@ -1,6 +1,4 @@
 (function () {
-  'use strict';
-
   var easeFunctions = {
     easeInQuad: function (t, b, c, d) {
       t /= d;
@@ -22,8 +20,6 @@
 })();
 
 (function () {
-  'use strict';
-
   var footerToggle = document.querySelectorAll('.footer__toggle');
   var nojs = document.querySelectorAll('.spoiler--nojs');
 

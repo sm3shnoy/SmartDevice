@@ -1,0 +1,46 @@
+.main-checkbox__text {
+  position: relative;
+  display: inline-block;
+
+  font-family: $secondary-fonts;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: $main-text-color;
+  vertical-align: middle;
+
+  cursor: pointer;
+  user-select: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $secondary-bg-color;
+    background-color: transparent;
+  }
+}
+
+.main-checkbox__text--left {
+  padding: 0 0 0 32px;
+
+  &::after {
+    top: 0;
+    left: 0;
+  }
+}
+
+.main-checkbox input:checked + .main-checkbox__text::after {
+  background: url("../img/flag.svg") no-repeat center;
+}
+
+.main-checkbox input:hover + .main-checkbox__text::after,
+.main-checkbox input:focus + .main-checkbox__text::after {
+  opacity: 0.7;
+}
+
+.main-checkbox input:active + .main-checkbox__text::after {
+  opacity: 0.5;
+}

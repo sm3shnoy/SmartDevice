@@ -1,6 +1,4 @@
 (function () {
-  'use strict';
-
   var easeFunctions = {
     easeInQuad: function (t, b, c, d) {
       t /= d;

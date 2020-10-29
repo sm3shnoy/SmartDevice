@@ -60,6 +60,10 @@
 
     overflow: hidden;
   }
+
+  .about__btn {
+    margin-top: 21px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -75,9 +79,15 @@
 
   .about p {
     margin: 0 0 41px 2px;
+
+    -webkit-line-clamp: 8;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
   .about__btn {
-    margin-top: 35px;
+    margin-top: 28px;
   }
 }

@@ -3,8 +3,9 @@
 @import "variables.scss";
 @import "mixins.scss";
 @import "scaffolding.scss";
-@import "blocks/primary-btn";
-@import "blocks/secondary-btn";
+@import "blocks/primary-btn.scss";
+@import "blocks/secondary-btn.scss";
+@import "blocks/main-checkbox.scss";
 
 // стили для блоков
 @import "blocks/header";
@@ -17,3 +18,4 @@
 @import "blocks/features";
 @import "blocks/about";
 @import "blocks/products";
+@import "blocks/feedback";
