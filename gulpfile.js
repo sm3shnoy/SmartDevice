@@ -86,7 +86,6 @@ gulp.task('copy', function () {
   return gulp.src([
     'source/fonts/**/*.{woff,woff2}',
     'source/img/**',
-    'source/js/**',
     'source//*.ico'
   ], {
     base: 'source'
@@ -104,5 +103,11 @@ gulp.task('scripts', function () {
       .pipe(gulp.dest('build/js/'));
 });
 
-gulp.task('build', gulp.series('clean', 'copy', 'css', 'sprite', 'html', 'scripts'));
+gulp.task('scriptlibs', function () {
+  return gulp.src('source/js/vendor/*.js')
+      .pipe(concat('vendor.js'))
+      .pipe(gulp.dest('build/js/'));
+});
+
+gulp.task('build', gulp.series('clean', 'copy', 'css', 'sprite', 'html', 'scriptlibs', 'scripts'));
 gulp.task('start', gulp.series('build', 'server'));
