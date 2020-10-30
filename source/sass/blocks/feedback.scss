@@ -79,18 +79,18 @@
 .feedback__form-bottom {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   margin-top: 43px;
 }
 
 .feedback__form-submit {
   padding: 13px 80px;
-  margin-right: 36px;
+  margin-right: 35px;
 }
 
 .feedback__form-checkbox {
   max-width: 262px;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 @media (max-width: 1180px) {

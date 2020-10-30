@@ -97,6 +97,7 @@
 
 .footer__contacts-info p {
   @include reset;
+  max-width: 333px;
 
   font-family: $secondary-fonts;
   font-style: normal;
