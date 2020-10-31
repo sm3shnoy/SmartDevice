@@ -1,3 +1,5 @@
+'use strict';
+
 (function () {
   var easeFunctions = {
     easeInQuad: function (t, b, c, d) {

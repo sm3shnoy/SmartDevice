@@ -1,3 +1,5 @@
+'use strict';
+
 (function () {
   var footerToggle = document.querySelectorAll('.footer__toggle');
   var nojs = document.querySelectorAll('.spoiler--nojs');
@@ -10,10 +12,10 @@
     button.addEventListener('click', function () {
       var spoiler = button.parentNode.nextElementSibling;
       if (spoiler.classList.contains('spoiler')) {
-          spoiler.classList.toggle('spoiler--opened');
+        spoiler.classList.toggle('spoiler--opened');
       }
     });
-  }
+  };
 
   for (var j = 0; j < footerToggle.length; j++) {
     addClickListener(footerToggle[j]);

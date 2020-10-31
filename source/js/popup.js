@@ -1,3 +1,5 @@
+'use strict';
+
 (function () {
   var link = document.querySelector('.header__call-btn');
 
@@ -71,4 +73,3 @@
     }
   );
 })();
-
