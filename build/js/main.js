@@ -74,7 +74,6 @@
   );
 })();
 
-
 'use strict';
 
 (function () {
