@@ -2,13 +2,13 @@
 
 (function () {
   var footerToggle = document.querySelectorAll('.footer__toggle');
-  var nojs = document.querySelectorAll('.spoiler--nojs');
+  var noJSStyles = document.querySelectorAll('.spoiler--nojs');
 
-  for (var i = 0; i < nojs.length; i++) {
-    nojs[i].classList.remove('spoiler--nojs');
+  for (var i = 0; i < noJSStyles.length; i++) {
+    noJSStyles[i].classList.remove('spoiler--nojs');
   }
 
-  var addClickListener = function (button) {
+  var spoilerClick = function (button) {
     button.addEventListener('click', function () {
       var spoiler = button.parentNode.nextElementSibling;
       if (spoiler.classList.contains('spoiler')) {
@@ -18,6 +18,6 @@
   };
 
   for (var j = 0; j < footerToggle.length; j++) {
-    addClickListener(footerToggle[j]);
+    spoilerClick(footerToggle[j]);
   }
 })();

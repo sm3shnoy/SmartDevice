@@ -15,8 +15,10 @@
   var moveTo = new MoveTo ({
     ease: 'easeInQuad'
   }, easeFunctions);
-  var triggers = document.getElementsByClassName('js-scroll');
-  for (var i = 0; i < triggers.length; i++) {
-    moveTo.registerTrigger(triggers[i]);
+  var triggers = document.querySelectorAll('.js-scroll');
+  if (triggers) {
+    for (var i = 0; i < triggers.length; i++) {
+      moveTo.registerTrigger(triggers[i]);
+    }
   }
 })();

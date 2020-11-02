@@ -19,6 +19,7 @@
 }
 
 .footer__logo {
+  display: flex;
   margin-bottom: 53px;
 }
 
@@ -26,7 +27,7 @@
   color: $fifth-text-color;
 }
 
-.footer__social-text {
+.footer__social p {
   display: none;
 
   font-family: $secondary-fonts;
@@ -67,6 +68,7 @@
   @include reset;
   display: inline-block;
 
+  vertical-align: top;
   font-weight: 400;
   font-size: 15px;
   line-height: 16px;

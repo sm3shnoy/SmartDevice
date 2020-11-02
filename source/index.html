@@ -6,20 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Главная страница - SmartDevice</title>
-  <link rel="preload" href="fonts/RobotoCondensed/RobotoCondensed-Bold.woff" as="font" crossorigin>
-  <link rel="preload" href="fonts/RobotoCondensed/RobotoCondensed-Bold.woff2" as="font" crossorigin>
-  <link rel="preload" href="fonts/RobotoCondensed/RobotoCondensed-BoldItalic.woff" as="font" crossorigin>
-  <link rel="preload" href="fonts/RobotoCondensed/RobotoCondensed-BoldItalic.woff2" as="font" crossorigin>
-  <link rel="preload" href="fonts/RobotoCondensed/RobotoCondensed-Italic.woff" as="font" crossorigin>
-  <link rel="preload" href="fonts/RobotoCondensed/RobotoCondensed-Italic.woff2" as="font" crossorigin>
-  <link rel="preload" href="fonts/RobotoCondensed/RobotoCondensed-Light.woff" as="font" crossorigin>
-  <link rel="preload" href="fonts/RobotoCondensed/RobotoCondensed-Light.woff2" as="font" crossorigin>
-  <link rel="preload" href="fonts/RobotoCondensed/RobotoCondensed-LightItalic.woff" as="font" crossorigin>
-  <link rel="preload" href="fonts/RobotoCondensed/RobotoCondensed-LightItalic.woff2" as="font" crossorigin>
-  <link rel="preload" href="fonts/RobotoCondensed/RobotoCondensed-Regular.woff" as="font" crossorigin>
-  <link rel="preload" href="fonts/RobotoCondensed/RobotoCondensed-Regular.woff2" as="font" crossorigin>
-  <link rel="preload" href="fonts/Roboto/Roboto-Medium.woff" as="font" crossorigin>
-  <link rel="preload" href="fonts/Roboto/Roboto-Medium.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/roboto-condensed/roboto-condensed-bold.woff" as="font" crossorigin>
+  <link rel="preload" href="fonts/roboto-condensed/roboto-condensed-bold.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/roboto-condensed/roboto-condensed-bold-italic.woff" as="font" crossorigin>
+  <link rel="preload" href="fonts/roboto-condensed/roboto-condensed-bold-italic.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/roboto-condensed/roboto-condensed-italic.woff" as="font" crossorigin>
+  <link rel="preload" href="fonts/roboto-condensed/roboto-condensed-italic.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/roboto-condensed/roboto-condensed-light.woff" as="font" crossorigin>
+  <link rel="preload" href="fonts/roboto-condensed/roboto-condensed-light.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/roboto-condensed/roboto-condensed-light-italic.woff" as="font" crossorigin>
+  <link rel="preload" href="fonts/roboto-condensed/roboto-condensed-light-italic.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/roboto-condensed/roboto-condensed-regular.woff" as="font" crossorigin>
+  <link rel="preload" href="fonts/roboto-condensed/roboto-condensed-regular.woff2" as="font" crossorigin>
   <link rel="preload" href="fonts/PTMono/PTMono-Regular.woff" as="font" crossorigin>
   <link rel="preload" href="fonts/PTMono/PTMono-Regular.woff2" as="font" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
@@ -34,16 +32,13 @@
     <header class="header">
       <div class="header__container container">
         <div class="header__info">
-          <a class="header__logo logo">
-            <svg width="52" height="52" role="img" viewbox="0 0 52 52">
-              <use xlink:href="#icon-logo"></use>
-            </svg>
-            <p class="logo__text">
-              <span class="logo__name">Smart Device</span>
-              <span class="logo__slogan">Умные технологии</span>
-            </p>
+          <a class="header__logo">
+            <picture class="header__logo-picture">
+              <source media="(max-width: 767px)" srcset="img/header-logo-mobile.svg">
+              <img src="img/icon-header-logo.svg">
+            </picture>
           </a>
-          <button class="header__menu-toggle">Открыть меню</button>
+          <button class="header__menu-toggle" type="button">Открыть меню</button>
           <a class="header__email" href="mailto:info@sd.ru">info@sd.ru</a>
           <a class="header__phone" href="tel:+7(495)000-52-52">+7 (495) 000 52 52</a>
           <a class="header__call-btn primary-btn" href="#">Заказать звонок</a>
@@ -57,6 +52,9 @@
         <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
         <a class="banner__btn secondary-btn js-scroll" href="#feedback">
           Получить бесплатную консультацию
+        </a>
+        <a class="banner__btn banner__btn--mobile secondary-btn js-scroll" href="#feedback">
+          Бесплатная консультация
         </a>
         <a class="banner__scroll-down js-scroll" href="#features">Скролл вниз</a>
       </div>
@@ -161,10 +159,12 @@
       <div class="feedback__container container">
         <div class="feedback__wrapper">
           <h2 class="feedback__title block-title">Остались вопросы? Задайте их нам!</h2>
-          <span class="feedback__note">Мы проконсультируем вас бесплатно</span>
-          <form class="feedback__form form" action="https://echo.htmlacademy.ru/">
+          <p>Мы проконсультируем вас бесплатно</p>
+          <form action="https://echo.htmlacademy.ru/">
             <div class="feedback__form-field feedback__form-field--col-2 form__field">
-              <input type="text" name="name" placeholder="Имя" required>
+              <label class="visually-hidden" for="name">Имя</label>
+              <input id="name" type="text" name="name" placeholder="Имя" required>
+              <label class="visually-hidden" for="phone">Телефон</label>
               <input id="phone" type="tel" name="phone" placeholder="Телефон" required>
             </div>
             <div class="feedback__form-field form__field">
@@ -173,7 +173,7 @@
             <div class="feedback__form-bottom">
               <button class="feedback__form-submit primary-btn" type="submit">Задать вопрос</button>
               <label class="feedback__form-checkbox main-checkbox">
-                <input class="visually-hidden" type="checkbox" checked />
+                <input class="visually-hidden" type="checkbox" checked required />
                 <span class="main-checkbox__text main-checkbox__text--left">Я согласен на обработку персональных
                   данных</span>
               </label>
@@ -189,16 +189,12 @@
     <div class="footer__container container">
       <div class="footer__top">
         <div class="footer__social">
-          <a class="footer__logo logo">
-            <svg width="52" height="52" role="img">
-              <use xlink:href="#icon-logo"></use>
+          <a class="footer__logo">
+            <svg width="216" height="52" role="img">
+              <use xlink:href="#icon-footer-logo"></use>
             </svg>
-            <p class="logo__text">
-              <span class="logo__name">Service Device</span>
-              <span class="logo__slogan">Умные технологии</span>
-            </p>
           </a>
-          <p class="footer__social-text">
+          <p>
             1999-2018 SD Service Devices
           </p>
           <ul class="footer__social-list social">
@@ -230,7 +226,7 @@
             <h3 class="footer__sections-title footer__title">
               Разделы сайта
             </h3>
-            <button class="footer__toggle">Показать скрытый текст</button>
+            <button class="footer__toggle" type="button">Показать скрытый текст</button>
           </div>
           <ul class="footer__site-list site-list spoiler spoiler--nojs">
             <li class="site-list__item">
@@ -261,7 +257,7 @@
             <h3 class="footer__sections-title footer__title">
               Наш офис
             </h3>
-            <button class="footer__toggle">Показать скрытый текст</button>
+            <button class="footer__toggle" type="button">Показать скрытый текст</button>
           </div>
           <address class="footer__contacts-info spoiler spoiler--nojs">
             <p>г. Мытищи, Олимпийский проспект, д.10</p>
@@ -299,18 +295,21 @@
       <p class="popup__text">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
       <form class="popup__feedback-form popup__form form" action="https://echo.htmlacademy.ru/">
         <div class="popup__feedback-field form__field">
-          <input type="text" name="popupName" placeholder="Имя" required>
+          <label class="visually-hidden" for="popup-name">Имя</label>
+          <input id="popup-name" type="text" name="popup-name" placeholder="Имя" required>
         </div>
         <div class="popup__feedback-field form__field">
-          <input id="popupPhone" type="tel" name="popupPhone" placeholder="Телефон" required>
+          <label class="visually-hidden" for="popup-phone">Телефон</label>
+          <input id="popup-phone" type="tel" name="popup-phone" placeholder="Телефон" required>
         </div>
         <div class="popup__feedback-field form__field">
-          <textarea name="popupQuestion" placeholder="Ваш вопрос" required></textarea>
+          <label class="visually-hidden" for="popup-question">Ваш вопрос</label>
+          <textarea id="popup-question" name="popup-question" placeholder="Ваш вопрос" required></textarea>
         </div>
         <div class="popup__feedback-bottom form__bottom">
           <button class="popup__feedback-submit primary-btn" type="submit">Отправить</button>
           <label class="popup__feedback-checkbox main-checkbox">
-            <input class="visually-hidden" type="checkbox" checked />
+            <input class="visually-hidden" type="checkbox" checked required />
             <span class="main-checkbox__text main-checkbox__text--left">Я согласен на обработку персональных
               данных</span>
           </label>
