@@ -85,7 +85,6 @@
       if (popup.classList.contains('active')) {
         popup.classList.remove('active');
         document.querySelector('body').style.overflow = 'hidden';
-
       }
     }
   });
