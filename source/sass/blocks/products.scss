@@ -6,9 +6,13 @@
   padding: 87px 25px 107px;
 }
 
-.products__title {
+.products h2 {
+  @include reset;
   margin-bottom: 53px;
 
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
   color: $main-text-color;
 }
 

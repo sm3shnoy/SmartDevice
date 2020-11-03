@@ -60,15 +60,6 @@ img {
   padding: 0 25px;
 }
 
-.block-title {
-  @include reset;
-
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 51px;
-  color: $extra-text-color;
-}
-
 // Для планшетов
 @media (max-width: 1023px) {
   .container {

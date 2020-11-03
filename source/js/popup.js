@@ -27,22 +27,27 @@
     isStorageSupport = false;
   }
 
-  link.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    document.querySelector('body').style.overflow = 'hidden';
-    popup.classList.add('active');
-    username.focus();
+  if (link) {
+    link.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      document.querySelector('body').style.overflow = 'hidden';
+      if (popup) {
+        popup.classList.add('active');
+      }
 
-    if (username) {
-      username.value = storageUsername;
-    }
-    if (tel) {
-      tel.value = storageTel;
-    }
-    if (comment) {
-      comment.value = storageComment;
-    }
-  });
+      if (username) {
+        username.value = storageUsername;
+        username.focus();
+      }
+      if (tel) {
+        tel.value = storageTel;
+      }
+      if (comment) {
+        comment.value = storageComment;
+      }
+    });
+  }
+
 
   if (popupCloseBtn) {
     popupCloseBtn.addEventListener('click', function (evt) {
@@ -80,10 +85,13 @@
   });
 
   if (tel) {
-    var popupPhoneMask = IMask(
-      tel, {
-        mask: '+{7}(000)000-00-00'
-      }
+    /* eslint-disable no-unused-vars */
+    /* eslint new-cap: [2, {"capIsNewExceptions": ["IMask"]}] */
+    var popupPhoneMask = window.IMask(
+        tel, {
+          mask: '+{7}(000)000-00-00'
+        }
     );
+    /* eslint-disable no-unused-vars */
   }
 })();

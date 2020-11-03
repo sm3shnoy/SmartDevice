@@ -1,11 +1,19 @@
+
 'use strict';
 
 (function () {
-  var phoneMask = IMask(
-    document.querySelector('#phone'), {
-      mask: '+{7}(000)000-00-00'
-    }
-  );
+  var phone = document.querySelector('#phone');
+
+  if (phone) {
+    /* eslint-disable no-unused-vars */
+    /* eslint new-cap: [2, {"capIsNewExceptions": ["IMask"]}] */
+    var phoneMask = window.IMask(
+        phone, {
+          mask: '+{7}(000)000-00-00'
+        }
+    );
+    /* eslint-disable no-unused-vars */
+  }
 })();
 
 'use strict';
@@ -37,22 +45,27 @@
     isStorageSupport = false;
   }
 
-  link.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    document.querySelector('body').style.overflow = 'hidden';
-    popup.classList.add('active');
-    username.focus();
+  if (link) {
+    link.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      document.querySelector('body').style.overflow = 'hidden';
+      if (popup) {
+        popup.classList.add('active');
+      }
 
-    if (username) {
-      username.value = storageUsername;
-    }
-    if (tel) {
-      tel.value = storageTel;
-    }
-    if (comment) {
-      comment.value = storageComment;
-    }
-  });
+      if (username) {
+        username.value = storageUsername;
+        username.focus();
+      }
+      if (tel) {
+        tel.value = storageTel;
+      }
+      if (comment) {
+        comment.value = storageComment;
+      }
+    });
+  }
+
 
   if (popupCloseBtn) {
     popupCloseBtn.addEventListener('click', function (evt) {
@@ -90,11 +103,14 @@
   });
 
   if (tel) {
-    var popupPhoneMask = IMask(
-      tel, {
-        mask: '+{7}(000)000-00-00'
-      }
+    /* eslint-disable no-unused-vars */
+    /* eslint new-cap: [2, {"capIsNewExceptions": ["IMask"]}] */
+    var popupPhoneMask = window.IMask(
+        tel, {
+          mask: '+{7}(000)000-00-00'
+        }
     );
+    /* eslint-disable no-unused-vars */
   }
 })();
 
@@ -112,7 +128,7 @@
     }
   };
 
-  var moveTo = new MoveTo ({
+  var moveTo = new window.MoveTo({
     ease: 'easeInQuad'
   }, easeFunctions);
   var triggers = document.querySelectorAll('.js-scroll');
@@ -127,10 +143,10 @@
 
 (function () {
   var footerToggle = document.querySelectorAll('.footer__toggle');
-  var noJSStyles = document.querySelectorAll('.spoiler--nojs');
+  var spoilerNoJs = document.querySelectorAll('.spoiler--nojs');
 
-  for (var i = 0; i < noJSStyles.length; i++) {
-    noJSStyles[i].classList.remove('spoiler--nojs');
+  for (var i = 0; i < spoilerNoJs.length; i++) {
+    spoilerNoJs[i].classList.remove('spoiler--nojs');
   }
 
   var spoilerClick = function (button) {

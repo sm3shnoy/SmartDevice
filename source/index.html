@@ -18,8 +18,8 @@
   <link rel="preload" href="fonts/roboto-condensed/roboto-condensed-light-italic.woff2" as="font" crossorigin>
   <link rel="preload" href="fonts/roboto-condensed/roboto-condensed-regular.woff" as="font" crossorigin>
   <link rel="preload" href="fonts/roboto-condensed/roboto-condensed-regular.woff2" as="font" crossorigin>
-  <link rel="preload" href="fonts/PTMono/PTMono-Regular.woff" as="font" crossorigin>
-  <link rel="preload" href="fonts/PTMono/PTMono-Regular.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/pt-mono/ptmono-regular.woff" as="font" crossorigin>
+  <link rel="preload" href="fonts/pt-mono/ptmono-regular.woff2" as="font" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -68,8 +68,8 @@
         <h2 class="visually-hidden">Наши преимущества</h2>
         <div class="features__container container">
           <ul class="features__list">
-            <li class="features__item">
-              <svg class="features__item-icon features__item-icon--clock" width="29" height="35" viewbox="0 0 29 35">
+            <li class="features__item features__item--clock">
+              <svg width="29" height="35" viewbox="0 0 29 35">
                 <use xlink:href="#icon-clock"></use>
               </svg>
               <b>Оперативные сроки</b>
@@ -78,8 +78,8 @@
                 заказы плат и комплектующих в самые короткие сроки
               </p>
             </li>
-            <li class="features__item">
-              <svg class="features__item-icon features__item-icon--hired" width="35" height="35" viewbox="0 0 35 35">
+            <li class="features__item features__item--hired">
+              <svg width="35" height="35" viewbox="0 0 35 35">
                 <use xlink:href="#icon-hired"></use>
               </svg>
               <b>Крупные поставщики</b>
@@ -88,8 +88,8 @@
                 Сотрудничество с такими компаниями обеспечивает хорошее качество нашей продукции.
               </p>
             </li>
-            <li class="features__item">
-              <svg class="features__item-icon features__item-icon--detective" width="36" height="31"
+            <li class="features__item features__item--detective">
+              <svg width="36" height="31"
                 viewbox="0 0 36 31">
                 <use xlink:href="#icon-detective"></use>
               </svg>
@@ -98,8 +98,8 @@
                 По желанию клиента мы обеспечиваем полную конфеденциальность.
               </p>
             </li>
-            <li class="features__item">
-              <svg class="features__item-icon features__item-icon--tag" width="35" height="35" viewbox="0 0 35 35">
+            <li class="features__item features__item--tag">
+              <svg width="35" height="35" viewbox="0 0 35 35">
                 <use xlink:href="#icon-tag"></use>
               </svg>
               <b>Персонализация стоимости</b>
@@ -114,7 +114,7 @@
 
       <section class="about">
         <div class="about__container container">
-          <h2 class="about__title block-title">О компании</h2>
+          <h2>О компании</h2>
           <p>
             Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997
             года. Выполняем срочные заказы и пилотные образцы до 10 дней.
@@ -132,7 +132,7 @@
 
     <section class="products">
       <div class="products__container container">
-        <h2 class="products__title block-title">
+        <h2>
           Service Device предлагает следующие товары и услуги
         </h2>
         <ul class="products__list">
@@ -168,14 +168,14 @@
               <input id="phone" type="tel" name="phone" placeholder="Телефон" required>
             </div>
             <div class="feedback__form-field">
-              <textarea name="question" placeholder="Ваш вопрос" required></textarea>
+              <label class="visually-hidden" for="question">Ваш вопрос</label>
+              <textarea id="question" name="question" placeholder="Ваш вопрос" required></textarea>
             </div>
             <div class="feedback__form-bottom">
               <button class="feedback__form-submit primary-btn" type="submit">Задать вопрос</button>
               <label class="feedback__form-checkbox main-checkbox">
                 <input class="visually-hidden" type="checkbox" checked required />
-                <span class="main-checkbox__text main-checkbox__text--left">Я согласен на обработку персональных
-                  данных</span>
+                <span class="main-checkbox__text main-checkbox__text--left">Я согласен на обработку персональных данных</span>
               </label>
             </div>
           </form>
@@ -223,7 +223,7 @@
         </div>
         <div class="footer__sections">
           <div class="footer__sections-header">
-            <h3 class="footer__sections-title footer__title">
+            <h3>
               Разделы сайта
             </h3>
             <button class="footer__toggle" type="button">Показать скрытый текст</button>
@@ -254,7 +254,7 @@
         </div>
         <div class="footer__contacts">
           <div class="footer__sections-header">
-            <h3 class="footer__sections-title footer__title">
+            <h3>
               Наш офис
             </h3>
             <button class="footer__toggle" type="button">Показать скрытый текст</button>
@@ -276,8 +276,12 @@
     </div>
     <div class="footer__bottom">
       <div class="footer__bottom-container container">
-        <p class="footer__bottom-law">Все права защищены</p>
-        <p class="footer__bottom-owner">1999-2018 SD Service Devices</p>
+        <div class="footer__bottom-law">
+          <p>Все права защищены</p>
+        </div>
+        <div class="footer__bottom-owner">
+          <p>1999-2018 SD Service Devices</p>
+        </div>
         <a class="footer__bottom-link footer__bottom-terms" href="#">Условия конфиденциальности</a>
         <a class="footer__bottom-link" href="#">Developed by wow studio</a>
       </div>
@@ -291,8 +295,8 @@
           <use xlink:href="#icon-cross"></use>
         </svg>
       </button>
-      <h2 class="popup__title block-title">Закажите звонок</h2>
-      <p class="popup__text">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+      <h2>Закажите звонок</h2>
+      <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
       <form class="popup__feedback-form popup__form form" action="https://echo.htmlacademy.ru/">
         <div class="popup__feedback-field">
           <label class="visually-hidden" for="popup-name">Имя</label>
@@ -310,8 +314,7 @@
           <button class="popup__feedback-submit primary-btn" type="submit">Отправить</button>
           <label class="popup__feedback-checkbox main-checkbox">
             <input class="visually-hidden" type="checkbox" checked required />
-            <span class="main-checkbox__text main-checkbox__text--left">Я согласен на обработку персональных
-              данных</span>
+            <span class="main-checkbox__text main-checkbox__text--left">Я согласен на обработку персональных данных</span>
           </label>
         </div>
       </form>

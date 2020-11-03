@@ -2,10 +2,10 @@
 
 (function () {
   var footerToggle = document.querySelectorAll('.footer__toggle');
-  var noJSStyles = document.querySelectorAll('.spoiler--nojs');
+  var spoilerNoJs = document.querySelectorAll('.spoiler--nojs');
 
-  for (var i = 0; i < noJSStyles.length; i++) {
-    noJSStyles[i].classList.remove('spoiler--nojs');
+  for (var i = 0; i < spoilerNoJs.length; i++) {
+    spoilerNoJs[i].classList.remove('spoiler--nojs');
   }
 
   var spoilerClick = function (button) {

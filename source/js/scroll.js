@@ -12,7 +12,7 @@
     }
   };
 
-  var moveTo = new MoveTo ({
+  var moveTo = new window.MoveTo({
     ease: 'easeInQuad'
   }, easeFunctions);
   var triggers = document.querySelectorAll('.js-scroll');

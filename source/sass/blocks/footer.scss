@@ -64,9 +64,10 @@
   margin-bottom: 24px;
 }
 
-.footer__title {
+.footer h3 {
   @include reset;
   display: inline-block;
+  max-width: 250px;
 
   vertical-align: top;
   font-weight: 400;
@@ -161,6 +162,10 @@
   opacity: 0.5;
 }
 
+.footer__bottom p {
+  @include reset;
+}
+
 .footer__bottom-container {
   display: flex;
   flex-wrap: wrap;
@@ -192,10 +197,6 @@
 
 .footer__bottom-terms {
   margin-right: auto;
-}
-
-.footer__sections-title {
-  margin-bottom: 0;
 }
 
 .footer__toggle {
@@ -359,10 +360,6 @@
     max-width: 420px;
     width: 100%;
     margin: 0 auto;
-  }
-
-  .footer__title {
-    max-width: 250px;
   }
 
   .footer__toggle {

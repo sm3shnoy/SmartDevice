@@ -9,10 +9,10 @@
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
+}
 
-  &.active {
-    display: block;
-  }
+.popup.active {
+  display: block;
 }
 
 .popup__content {
@@ -54,15 +54,17 @@
   }
 }
 
-.popup__title {
+.popup h2 {
+  @include reset;
   margin-bottom: 11px;
 
+  font-weight: 400;
   font-size: 28px;
   line-height: 39px;
   color: $main-text-color;
 }
 
-.popup__text {
+.popup__feedback p {
   @include reset;
   margin-bottom: 32px;
 
@@ -78,7 +80,9 @@
 
 .popup__feedback-field input,
 .popup__feedback-field textarea {
-  padding: 14px 16px;
+  width: 100%;
+  padding: 14px 25px;
+  // padding: 14px 16px;
 
 
   font-family: $secondary-fonts;
@@ -103,15 +107,8 @@
   }
 }
 
-.popup__feedback-field input,
-.popup__feedback-field textarea {
-  width: 100%;
-  padding: 14px 25px;
-}
-
 .popup__feedback-field textarea {
   min-height: 104px;
-
 
   resize: none;
 }
