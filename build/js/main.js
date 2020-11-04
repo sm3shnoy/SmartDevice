@@ -6,8 +6,7 @@
 
   if (phone) {
     /* eslint-disable no-unused-vars */
-    /* eslint new-cap: [2, {"capIsNewExceptions": ["IMask"]}] */
-    var phoneMask = window.IMask(
+    var phoneMask = new window.IMask(
         phone, {
           mask: '+{7}(000)000-00-00'
         }
@@ -104,8 +103,7 @@
 
   if (tel) {
     /* eslint-disable no-unused-vars */
-    /* eslint new-cap: [2, {"capIsNewExceptions": ["IMask"]}] */
-    var popupPhoneMask = window.IMask(
+    var popupPhoneMask = new window.IMask(
         tel, {
           mask: '+{7}(000)000-00-00'
         }
