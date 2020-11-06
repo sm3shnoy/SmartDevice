@@ -106,40 +106,57 @@
 
   .features__container {
     max-width: 770px;
-    padding: 54px 25px 26px;
+    padding: 54px 25px 23px;
   }
 
   .features__item {
     max-width: 345px;
     min-height: 232px;
-    padding: 24px 21px 21px 26px;
+    padding: 23px 21px 21px 26px;
 
     &::before {
       width: 2px;
     }
   }
 
-  .features__item svg {
-    margin-bottom: 8px;
-  }
-
   .features__item b {
     margin-bottom: 9px;
   }
 
-  .features__item--hired svg {
+  .features__item--clock svg {
     width: 31px;
+    height: 36px;
+
+    margin-bottom: 7px;
+  }
+
+  .features__item--hired svg {
+    width: 32px;
     height: 32px;
+
+    margin-bottom: 10px;
+  }
+
+  .features__item--detective b {
+    margin-bottom: 16px;
   }
 
   .features__item--detective svg {
     width: 30px;
     height: 26px;
+
+    margin: 2px 0 10px 0;
   }
 
   .features__item--tag svg {
     width: 32px;
     height: 32px;
+
+    margin-bottom: 10px;
+  }
+
+  .features__item--tag b {
+    margin-bottom: 8px;
   }
 }
 
@@ -157,16 +174,41 @@
     max-width: initial;
     width: 100%;
     margin-bottom: 18px;
-    padding-bottom: 25px;
+    padding: 23px 21px 25px 25px;
   }
 
-  .features__item svg {
+  .features__item--hired {
+    padding: 23px 13px 25px 25px;
+  }
+
+  .features__item--tag {
+    padding: 23px 21px 25px 26px;
+  }
+
+  .features__item--clock svg {
+    margin-bottom: 12px;
+  }
+
+  .features__item--hired svg {
+    margin-bottom: 17px;
+  }
+
+  .features__item--detective {
+    margin-bottom: 21px;
+    padding-top: 26px;
+  }
+
+  .features__item--tag svg {
     margin-bottom: 12px;
   }
 
   .features__item b {
     font-size: 20px;
     line-height: 28px;
+  }
+
+  .features__item--tag b {
+    margin-bottom: 12px;
   }
 
   .features__item p {

@@ -120,7 +120,7 @@
 @media (max-width: 1023px) {
   .header__container {
     max-width: 870px;
-    padding: 18px 25px 0;
+    padding: 19px 25px 0;
   }
 
   .header__logo {
@@ -128,13 +128,13 @@
   }
 
   .header__menu-toggle {
-    margin: 0;
+    margin: 0 0 8px 0;
   }
 
   .header__email {
     width: 25px;
     height: 18px;
-    margin-left: 37px;
+    margin: 0 0 8px 37px;
     padding-left: 0;
 
     font-size: 0;
@@ -145,7 +145,7 @@
   .header__phone {
     width: 24px;
     height: 24px;
-    margin-left: 33px;
+    margin: 0 0 8px 33px;
     padding-left: 0;
 
     font-size: 0;
@@ -161,7 +161,11 @@
 @media (max-width: 767px) {
   .header__container {
     max-width: 420px;
-    padding: 15px 15px 0;
+    padding: 18px 15px 0;
+  }
+
+  .header__info {
+    padding-left: 2px;
   }
 
   .header__logo-picture {
@@ -178,10 +182,10 @@
   }
 
   .header__email {
-    margin-left: 27px;
+    margin: 0 0 6px 27px;
   }
 
   .header__phone {
-    margin-left: 23px;
+    margin: 0 0 6px 23px;
   }
 }

@@ -47,3 +47,9 @@
 .main-checkbox input:active + .main-checkbox__text::after {
   opacity: 0.5;
 }
+
+@media (max-width: 767px) {
+  .main-checkbox__text--left {
+    padding-left: 33px;
+  }
+}

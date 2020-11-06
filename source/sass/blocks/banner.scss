@@ -125,16 +125,16 @@
 
 @media (max-width: 1023px) {
   .banner {
-    padding-top: 60px;
+    padding-top: 56px;
 
     background-position:
-      right -26.4vw top 43px,
-      right -25.7vw top -108px;
+      right -26.4vw top 39px,
+      right -25.7vw top -113px;
     background-size: 60%, 68.5%;
   }
 
   .banner__container {
-    padding-bottom: 162px;
+    padding-bottom: 163px;
   }
 
   .banner h1 {
@@ -148,7 +148,7 @@
   .banner p {
     max-width: 410px;
     padding-left: 51px;
-    margin: 0 0 56px 63px;
+    margin: 0 0 54px 63px;
 
     font-size: 18px;
     line-height: 28px;
@@ -171,11 +171,11 @@
 
 @media (max-width: 767px) {
   .banner {
-    padding-top: 233px;
+    padding-top: 230px;
 
     background-position:
-      right -7px top 38px,
-      right -337px top -100px;
+      right -7px top 37px,
+      right -337px top -102px;
     background-size: 301px, 506px;
   }
 
