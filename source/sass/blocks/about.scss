@@ -31,12 +31,6 @@
   font-size: 16px;
   line-height: 22px;
   color: $extra-text-color;
-
-
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .about__btn {
@@ -66,7 +60,10 @@
     width: 100%;
     margin: 0 0 20px 3px;
 
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
     overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .about__btn {
