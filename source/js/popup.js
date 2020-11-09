@@ -37,6 +37,7 @@
         overlay.classList.add('active');
       }
 
+
       if (username) {
         username.value = storageUsername;
         username.focus();
@@ -45,7 +46,7 @@
         tel.value = storageTel;
       }
       if (comment) {
-        comment.value = storageComment;
+        comment.value = (storageComment === null ? '' : storageComment);
       }
     });
   }
