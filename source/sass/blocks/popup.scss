@@ -8,7 +8,6 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .popup.active {
@@ -17,6 +16,7 @@
 
 .popup__content {
   position: relative;
+  z-index: 3;
 
   margin: 6.8vw auto;
   padding: 40px 44px;

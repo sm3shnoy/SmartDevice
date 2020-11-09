@@ -1,6 +1,7 @@
 'use strict';
 
 (function () {
+  var overlay = document.querySelector('.overlay');
   var link = document.querySelector('.header__call-btn');
 
   var popup = document.querySelector('.popup');
@@ -33,6 +34,7 @@
       document.querySelector('body').style.overflow = 'hidden';
       if (popup) {
         popup.classList.add('active');
+        overlay.classList.add('active');
       }
 
       if (username) {
@@ -53,6 +55,7 @@
     popupCloseBtn.addEventListener('click', function (evt) {
       evt.preventDefault();
       popup.classList.remove('active');
+      overlay.classList.remove('active');
       document.querySelector('body').style.overflow = 'auto';
     });
   }
@@ -79,10 +82,21 @@
       evt.preventDefault();
       if (popup.classList.contains('active')) {
         popup.classList.remove('active');
+        overlay.classList.remove('active');
         document.querySelector('body').style.overflow = 'hidden';
       }
     }
   });
+
+  if (overlay) {
+    overlay.addEventListener('click', function () {
+      if (popup.classList.contains('active')) {
+        popup.classList.remove('active');
+        overlay.classList.remove('active');
+        document.querySelector('body').style.overflow = 'auto';
+      }
+    });
+  }
 
   if (tel) {
     /* eslint-disable no-unused-vars */
