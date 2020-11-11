@@ -332,33 +332,6 @@
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 
-  <script>
-    var spoilerToggle = document.querySelectorAll('.footer__toggle');
-    var spoilerNoJs = document.querySelectorAll('.spoiler--nojs');
-
-    for (var i = 0; i < spoilerNoJs.length; i++) {
-      spoilerNoJs[i].classList.remove('spoiler--nojs');
-    }
-
-    function closeAllSpoilers () {
-      for (var j = 0; j < spoilerToggle.length; j++) {
-        var spoiler = spoilerToggle[j].nextElementSibling;
-        spoiler.classList.remove('spoiler--opened');
-      }
-    }
-
-    for (var i = 0; i < spoilerToggle.length; i++) {
-      spoilerToggle[i].addEventListener('click', function(evt) {
-        var spoiler = this.nextElementSibling;
-
-        closeAllSpoilers();
-        spoiler.classList.add('spoiler--opened');
-      });
-    }
-
-
-  </script>
-
 </body>
 
 </html>
