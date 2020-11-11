@@ -228,11 +228,10 @@
           </ul>
         </div>
         <div class="footer__sections">
-          <div class="footer__sections-header">
+          <div class="footer__sections-header footer__toggle">
             <h3>
               Разделы сайта
             </h3>
-            <button class="footer__toggle" type="button">Показать скрытый текст</button>
           </div>
           <ul class="footer__site-list site-list spoiler spoiler--nojs">
             <li class="site-list__item">
@@ -259,11 +258,10 @@
           </ul>
         </div>
         <div class="footer__contacts">
-          <div class="footer__sections-header">
+          <div class="footer__sections-header footer__toggle">
             <h3>
               Наш офис
             </h3>
-            <button class="footer__toggle" type="button">Показать скрытый текст</button>
           </div>
           <address class="footer__contacts-info spoiler spoiler--nojs">
             <p>г. Мытищи, Олимпийский проспект, д.10</p>
@@ -333,6 +331,33 @@
 
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
+
+  <script>
+    var spoilerToggle = document.querySelectorAll('.footer__toggle');
+    var spoilerNoJs = document.querySelectorAll('.spoiler--nojs');
+
+    for (var i = 0; i < spoilerNoJs.length; i++) {
+      spoilerNoJs[i].classList.remove('spoiler--nojs');
+    }
+
+    function closeAllSpoilers () {
+      for (var j = 0; j < spoilerToggle.length; j++) {
+        var spoiler = spoilerToggle[j].nextElementSibling;
+        spoiler.classList.remove('spoiler--opened');
+      }
+    }
+
+    for (var i = 0; i < spoilerToggle.length; i++) {
+      spoilerToggle[i].addEventListener('click', function(evt) {
+        var spoiler = this.nextElementSibling;
+
+        closeAllSpoilers();
+        spoiler.classList.add('spoiler--opened');
+      });
+    }
+
+
+  </script>
 
 </body>
 
