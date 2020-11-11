@@ -70,7 +70,13 @@
 }
 
 .header__email {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
   margin-left: auto;
+}
+
+.header__email a {
   padding-left: 39px;
 
   font-family: $secondary-fonts;
@@ -89,7 +95,13 @@
 }
 
 .header__phone {
+  display: flex;
+  flex-direction: column;
+  max-width: 210px;
   margin-left: 88px;
+}
+
+.header__phone a {
   padding-left: 34px;
 
   font-family: $secondary-fonts;
@@ -132,9 +144,12 @@
   }
 
   .header__email {
+    margin: 0 0 8px 37px;
+  }
+
+  .header__email a {
     width: 25px;
     height: 18px;
-    margin: 0 0 8px 37px;
     padding-left: 0;
 
     font-size: 0;
@@ -143,9 +158,12 @@
   }
 
   .header__phone {
+    margin: 0 0 8px 33px;
+  }
+
+  .header__phone a {
     width: 24px;
     height: 24px;
-    margin: 0 0 8px 33px;
     padding-left: 0;
 
     font-size: 0;
