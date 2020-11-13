@@ -151,10 +151,15 @@
     width: 25px;
     height: 18px;
     padding-left: 0;
+    margin-bottom: 10px;
 
     font-size: 0;
 
     background-size: cover;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .header__phone {
@@ -165,10 +170,15 @@
     width: 24px;
     height: 24px;
     padding-left: 0;
+    margin-bottom: 10px;
 
     font-size: 0;
 
     background-size: cover;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .header__call-btn {
