@@ -11,6 +11,10 @@
   }
 }
 
+.about__container.lazy {
+  background-image: none;
+}
+
 .about h2 {
   @include reset;
   margin-bottom: 20px;
