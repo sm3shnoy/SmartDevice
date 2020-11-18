@@ -82,11 +82,16 @@
 
 .header__email a {
   padding-left: 39px;
+  margin-bottom: 10px;
 
   font-family: $secondary-fonts;
   line-height: 18px;
 
   background: url("../img/icon-mail.svg") no-repeat left center;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   &:hover,
   &:focus {
@@ -107,11 +112,16 @@
 
 .header__phone a {
   padding-left: 34px;
+  margin-bottom: 10px;
 
   font-family: $secondary-fonts;
   line-height: 18px;
 
   background: url("../img/icon-phone.svg") no-repeat left center;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   &:hover,
   &:focus {
@@ -155,15 +165,10 @@
     width: 25px;
     height: 18px;
     padding-left: 0;
-    margin-bottom: 10px;
 
     font-size: 0;
 
     background-size: cover;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
   }
 
   .header__phone {
@@ -174,15 +179,10 @@
     width: 24px;
     height: 24px;
     padding-left: 0;
-    margin-bottom: 10px;
 
     font-size: 0;
 
     background-size: cover;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
   }
 
   .header__call-btn {
